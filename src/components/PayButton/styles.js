@@ -7,7 +7,7 @@ export const Button = styled(LinearGradient)`
   border-radius: 30px;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 `;
 
 export const Label = styled.Text`

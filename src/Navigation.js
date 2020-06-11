@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { AntDesign, Ionicons } from '@expo/vector-icons';
+import { AntDesign, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import HomeScreen from './screens/Home';
 import WalletScreen from './screens/Wallet';
@@ -11,8 +11,8 @@ import PayButton from './components/PayButton';
 const Tab = createBottomTabNavigator();
 const icons = {
   Home: {
-    lib: AntDesign,
-    name: 'home'
+    lib: MaterialCommunityIcons,
+    name: 'home-outline'
   },
   Wallet: {
     lib: AntDesign,
@@ -48,14 +48,16 @@ export default function Navigation() {
       })}
       tabBarOptions={{
         style: {
-          backgroundColor: '#131418',
-          borderTopColor: 'rgb(255,255,255,0.2)'
+          backgroundColor: '#131418'
         },
         labelStyle: {
           fontSize: 10
         },
         tabStyle: {
-          padding: 8
+          padding: 8,
+          height: 55,
+          backgroundColor: '#131418',
+          marginTop: -10
         },
         activeTintColor: '#fff',
         inactiveTintColor: '#92929c'
