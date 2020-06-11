@@ -13,6 +13,21 @@ import Img7 from '../../images/07.png';
 const items = [
   {
     key: String(Math.random()),
+    img: Img5,
+    label: 'Central de Doações'
+  },
+  {
+    key: String(Math.random()),
+    img: Img6,
+    label: 'Pagar Conta'
+  },
+  {
+    key: String(Math.random()),
+    img: Img7,
+    label: 'Cobrar'
+  },
+  {
+    key: String(Math.random()),
     img: Img1,
     label: 'Recarga de Celular'
   },
@@ -30,21 +45,6 @@ const items = [
     key: String(Math.random()),
     img: Img4,
     label: 'SKY TV Pré-Pago'
-  },
-  {
-    key: String(Math.random()),
-    img: Img5,
-    label: 'Central de Doações'
-  },
-  {
-    key: String(Math.random()),
-    img: Img6,
-    label: 'Pagar Conta'
-  },
-  {
-    key: String(Math.random()),
-    img: Img7,
-    label: 'Cobrar'
   }
 ];
 
@@ -66,7 +66,7 @@ export default function Suggestions() {
     <Container>
       <Header>
         {header.map(item => (
-          <Action border={item.hasBorder}>{item.label}</Action>
+          <Action hasBorder={item.hasBorder}>{item.label}</Action>
         ))}
       </Header>
       <Scroll>

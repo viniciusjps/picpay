@@ -26,46 +26,70 @@ import {
 
 import AvatarImg from '../../images/avatar.png';
 
+const items = [
+  {
+    avatar: AvatarImg,
+    user: '@viniciusjps',
+    owner: 'Você',
+    value: 'R$ 16,46',
+    description: 'Compra da última sexta',
+    comments: 0,
+    time: '2 horas atrás',
+    likes: 1,
+  },
+  {
+    avatar: AvatarImg,
+    user: '@viniciusjps',
+    owner: 'Você',
+    value: 'R$ 38,97',
+    description: 'Cinema',
+    time: '3 dias atrás',
+    comments: 2,
+    likes: 1
+  }
+];
+
 export default function Activities() {
   return (
     <Container>
       <Header>
         <Title>Atividades</Title>
         <Actions>
-          <ActionLabel>Todos</ActionLabel>
-          <ActionLabel>Minhas</ActionLabel>
+          <ActionLabel hasBorder={true}>Todos</ActionLabel>
+          <ActionLabel hasBorder={false}>Minhas</ActionLabel>
         </Actions>
       </Header>
-
-      <Card>
-        <CardHeader>
-          <Avatar source={AvatarImg} />
-          <Description>
-            <Bold>Você</Bold> pagou a <Bold>@viniciusjps</Bold>
-          </Description>
-        </CardHeader>
-        <CardBody>
-          <Username>Compra da última sexta</Username>
-        </CardBody>
-        <CardFooter>
-          <Details>
-            <Value>R$ 16,46</Value>
-            <Divider />
-            <Feather name="lock" color="#fff" />
-            <Date>2 horas atrás</Date>
-          </Details>
-          <FooterActions>
-            <Option>
-              <MaterialCommunityIcons name="comment-outline" color="#fff" size={16} />
-              <OptionLabel>0</OptionLabel>
-            </Option>
-            <Option>
-              <Feather name="heart" color="#fff" size={16} />
-              <OptionLabel>0</OptionLabel>
-            </Option>
-          </FooterActions>
-        </CardFooter>
-      </Card>
-    </Container>
+      {items.map((item) => (
+        <Card>
+          <CardHeader>
+            <Avatar source={item.avatar} />
+            <Description>
+              <Bold>{item.owner}</Bold> pagou a <Bold>{item.user}</Bold>
+            </Description>
+          </CardHeader>
+          <CardBody>
+            <Username>{item.description}</Username>
+          </CardBody>
+          <CardFooter>
+            <Details>
+              <Value>{item.value}</Value>
+              <Divider />
+              <Feather name="lock" color="#fff" />
+              <Date>{item.time}</Date>
+            </Details>
+            <FooterActions>
+              <Option>
+                <MaterialCommunityIcons name="comment-outline" color="#fff" size={16} />
+                <OptionLabel>{item.comments}</OptionLabel>
+              </Option>
+              <Option>
+                <Feather name="heart" color="#fff" size={16} />
+                <OptionLabel>{item.likes}</OptionLabel>
+              </Option>
+            </FooterActions>
+          </CardFooter>
+        </Card>
+      ))}
+    </Container >
   );
 }

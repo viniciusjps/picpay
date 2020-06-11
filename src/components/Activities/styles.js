@@ -9,6 +9,7 @@ export const Header = styled.View`
   height: 60px;
   padding: 0px 20px;
   padding-top: 20px;
+  margin-bottom: 10px;
 `;
 
 export const Title = styled.Text`
@@ -27,15 +28,17 @@ export const ActionLabel = styled.Text`
   font-size: 12px;
   padding: 2px 15px;
   margin-left: 15px;
-  border-bottom-width: 1px;
+  border-bottom-width: ${({ hasBorder }) => hasBorder ? '1px' : '0px'};
   border-bottom-color: #10c86e;
 `;
 
 export const Card = styled.View`
   background: #1e222b;
   border-radius: 8px;
-  margin: 10px;
   padding: 15px;
+  margin: 10px;
+  margin-top: 0px;
+  margin-bottom: 10px;
 `;
 
 export const CardHeader = styled.View`

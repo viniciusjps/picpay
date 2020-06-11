@@ -7,6 +7,7 @@ export const Container = styled.View`
 
 export const Scroll = styled.ScrollView.attrs(() => ({
   horizontal: true,
+  showsHorizontalScrollIndicator: false,
   contentContainerStyle: {
     paddingLeft: 5,
   }
@@ -21,30 +22,27 @@ export const Header = styled.View`
   margin-bottom: 10px;
 `;
 
-export const Action = styled.Text.attrs(({ border }) => ({
-  contentContainerStyle: {
-    borderBottomWidth:
-      border
-        ? 1
-        : 0
-  }
-}))`
+export const Action = styled.Text`
   font-weight: 700;
   color: #fff;
   margin-right: 20px;
   padding-bottom: 10px;
   font-size: 13px;
-  border-bottom-width: 2px;
   border-bottom-color: #fff;
+  border-bottom-width: ${({ hasBorder }) => hasBorder ? '2px' : '0px'};
 `;
 
-export const Option = styled.TouchableOpacity`
+export const Option = styled.TouchableOpacity.attrs(() => ({
+  activeOpacity: 1,
+}))`
   width: 80px;
   align-items: center;
   margin-right: 3px;
 `;
 
-export const Img = styled.Image`
+export const Img = styled.Image.attrs(() => ({
+  resizeMode: 'cover'
+}))`
   border-color: #fff;
   border-width: 2px;
   border-radius: 60px;
