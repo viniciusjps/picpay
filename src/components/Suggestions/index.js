@@ -12,37 +12,37 @@ import Img7 from '../../images/07.png';
 
 const items = [
   {
-    key: String(Math.random()),
+    key: '1',
     img: Img5,
     label: 'Central de Doações'
   },
   {
-    key: String(Math.random()),
+    key: '2',
     img: Img6,
     label: 'Pagar Conta'
   },
   {
-    key: String(Math.random()),
+    key: '3',
     img: Img7,
     label: 'Cobrar'
   },
   {
-    key: String(Math.random()),
+    key: '4',
     img: Img1,
     label: 'Recarga de Celular'
   },
   {
-    key: String(Math.random()),
+    key: '5',
     img: Img2,
     label: 'Uber Pré Pago'
   },
   {
-    key: String(Math.random()),
+    key: '6',
     img: Img3,
     label: 'Cartão de Transporte'
   },
   {
-    key: String(Math.random()),
+    key: '7',
     img: Img4,
     label: 'SKY TV Pré-Pago'
   }
@@ -50,12 +50,12 @@ const items = [
 
 const header = [
   {
-    key: String(Math.random()),
+    key: '1',
     label: 'Sugestões',
     hasBorder: true
   },
   {
-    key: String(Math.random()),
+    key: '2',
     label: 'Favoritos',
     hasBorder: false
   }
