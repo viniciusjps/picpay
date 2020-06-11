@@ -45,8 +45,14 @@ export const Bold = styled.Text`
   color: #fff;
 `;
 
+export const Line = styled.View`
+  background: #fff;
+  height: 2px;
+  width: 118px;
+`;
+
 export const EyeButton = styled.TouchableOpacity.attrs(() => ({
-  activeOpacity: 1
+  activeOpacity: 0.5
 }))`
 `;
 

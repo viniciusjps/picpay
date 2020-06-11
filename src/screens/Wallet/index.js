@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Feather, MaterialCommunityIcons, AntDesign } from '@expo/vector-icons'
 import { Switch } from 'react-native';
 
@@ -10,6 +10,7 @@ import {
   BalanceContainer,
   Value,
   Bold,
+  Line,
   Currency,
   EyeButton,
   Info,
@@ -35,24 +36,41 @@ import {
 
 import creditCard from '../../images/credit-card.png';
 
-let isEnabled = true;
-const toggleSwitch = () => {
-  isEnabled = !isEnabled;
-};
-
 export default function Wallet() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [useBalance, setUseBalance] = useState(true);
+
+  function toggleEyeVisibility() {
+    setIsVisible((prevState) => !prevState);
+  }
+
+  function toggleUseBalance() {
+    setUseBalance((prevState) => !prevState);
+  }
+
   return (
     <Wrapper>
-      <Header colors={['#52e78c', '#1ab563']}>
+      <Header
+        colors={
+          useBalance
+            ? ['#52e78c', '#1ab563']
+            : ['#d3d3d3', '#868686']
+        }
+      >
         <HeaderContainer>
           <Title>Saldo PicPay</Title>
           <BalanceContainer>
             <Value>
               <Currency>R$</Currency>
-              <Bold>315,00</Bold>
+              <Bold>
+                {isVisible
+                  ? '315,00'
+                  : <Line />
+                }
+              </Bold>
             </Value>
-            <EyeButton>
-              <Feather name="eye" size={20} color="#fff" />
+            <EyeButton onPress={toggleEyeVisibility}>
+              <Feather name={isVisible ? 'eye' : 'eye-off'} size={20} color="#fff" />
             </EyeButton>
           </BalanceContainer>
           <Info>Seu saldo rende 100% do CDI</Info>
@@ -70,7 +88,7 @@ export default function Wallet() {
       </Header>
       <UserBalance>
         <UserBalanceText>Usar saldo ao pagar</UserBalanceText>
-        <Switch value={isEnabled} trackColor={{ false: "#767577", true: "#000" }} />
+        <Switch value={useBalance} trackColor={{ false: "#767577", true: "#000" }} onValueChange={toggleUseBalance} />
       </UserBalance>
       <PaymentMethods>
         <PaymentMethodsTitle>Formas de pagamento</PaymentMethodsTitle>
