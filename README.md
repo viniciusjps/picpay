@@ -1,7 +1,9 @@
 # PicPay Dark Theme
 
 
-<p> Esse projeto é um clone do que seria o PicPay com tema escuro, utilizando o React Native.</p>
+<p> Esse projeto é um clone do que seria o PicPay com tema escuro, utilizando React Native, Styled Components e React Navigation 5.</p>
+
+<p>Este projeto utiliza o Expo.</p>
 
 ### :rocket: Como instalar e executar
 - `git clone https://github.com/viniciusjps/picpay`
