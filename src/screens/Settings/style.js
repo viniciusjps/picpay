@@ -23,7 +23,9 @@ export const Section = styled.Text`
   margin-bottom: 8px;
 `;
 
-export const SettigsItems = styled.View`
+export const SettigsItems = styled.TouchableOpacity.attrs(() => ({
+  activeOpacity: 0.8
+}))`
   background: #1e232a;
   flex-direction: row;
   align-items: center;
