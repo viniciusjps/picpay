@@ -91,8 +91,8 @@ export default function Notifications() {
             <NotificationTitle>Notificações</NotificationTitle>
             <NotificationAction>Configurar</NotificationAction>
           </NotificationsHeader>
-          {items.map((item) => (
-            <Card>
+          {items.map((item, i) => (
+            <Card key={String(i)}>
               <CardContainer>
                 <CardContent>
                   <Bold>{item.user}</Bold> {item.text}

@@ -9,7 +9,9 @@ export const WrapperContainer = styled.SafeAreaView`
   margin-bottom: 10px;
 `;
 
-export const Container = styled.ScrollView`
+export const Container = styled.ScrollView.attrs(() => ({
+  showsVerticalScrollIndicator: false
+}))`
 `;
 
 export const NotificationsHeader = styled.View`

@@ -6,6 +6,7 @@ import HomeScreen from './screens/Home';
 import WalletScreen from './screens/Wallet';
 import PayScreen from './screens/Pay';
 import Notifications from './screens/Notifications';
+import Settings from './screens/Settings';
 
 import PayButton from './components/PayButton';
 
@@ -32,7 +33,7 @@ const icons = {
 export default function Navigation() {
   return (
     <Tab.Navigator
-      initialRouteName="Notifications"
+      initialRouteName="Settings"
       screenOptions={({ route, navigation }) => ({
         tabBarIcon: ({ color, size, focused }) => {
           if (route.name === 'Pay') {
@@ -94,7 +95,7 @@ export default function Navigation() {
       />
       <Tab.Screen
         name="Settings"
-        component={PayScreen}
+        component={Settings}
         options={{
           title: 'Ajustes'
         }}
