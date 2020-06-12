@@ -59,8 +59,8 @@ export default function Activities() {
           <ActionLabel hasBorder={false}>Minhas</ActionLabel>
         </Actions>
       </Header>
-      {items.map((item) => (
-        <Card>
+      {items.map((item, i) => (
+        <Card key={i}>
           <CardHeader>
             <Avatar source={item.avatar} />
             <Description>

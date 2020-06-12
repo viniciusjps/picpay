@@ -6,6 +6,12 @@ export const Wrapper = styled.View`
   flex: 1;
 `;
 
+export const WrapperContainer = styled.ScrollView.attrs(() => ({
+  showsVerticalScrollIndicator: false
+}))`
+  flex: 1;
+`;
+
 export const Header = styled(LinearGradient)`
   height: 260px;
 `;
@@ -111,7 +117,7 @@ export const PaymentMethodsTitle = styled.Text`
 `;
 
 export const Card = styled.View`
-  background: #1e232a;
+  background: #1c1c1e;
   height: 200px;
   margin: 10px;
   border-radius: 5px;

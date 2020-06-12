@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "picpay",
+    "name": "PicPay Dark",
     "slug": "picpay",
     "platforms": [
       "ios",
@@ -23,6 +23,10 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.viniciusjps.picpay",
+      "versionCode": 1
     }
   }
 }

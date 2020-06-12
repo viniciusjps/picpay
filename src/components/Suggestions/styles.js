@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  background: #1e222b;
+  background: #1c1c1e;
   height: 195px;
 `;
 
@@ -28,6 +28,15 @@ export const Action = styled.Text`
   margin-right: 20px;
   padding-bottom: 10px;
   font-size: 13px;
+  border-bottom-color: #fff;
+  border-bottom-width: ${({ hasBorder }) => hasBorder ? '2px' : '0px'};
+`;
+
+export const ActionPay = styled.Text`
+  font-weight: 700;
+  color: #fff;
+  margin-right: 20px;
+  font-size: 16px;
   border-bottom-color: #fff;
   border-bottom-width: ${({ hasBorder }) => hasBorder ? '2px' : '0px'};
 `;

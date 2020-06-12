@@ -21,7 +21,7 @@ export default function Home() {
             </BalanceContainer>
             <AntDesign name="gift" size={30} color="#10c86e" />
           </Header>
-          <Suggestions />
+          <Suggestions page={'Home'} />
           <Activities />
           <Tips />
           <Banner />

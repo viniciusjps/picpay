@@ -1,6 +1,16 @@
 import React from 'react';
 
-import { Container, Scroll, Header, Action, Option, Img, Label } from './styles';
+import {
+  Container,
+  Scroll,
+  Header,
+  Action,
+  ActionPay,
+  Option,
+  Img,
+  Label
+} from './styles';
+
 import Img1 from '../../images/01.png';
 import Img2 from '../../images/02.png';
 import Img3 from '../../images/03.png';
@@ -12,37 +22,30 @@ import Img7 from '../../images/07.png';
 
 const items = [
   {
-    key: '1',
     img: Img5,
     label: 'Central de Doações'
   },
   {
-    key: '2',
     img: Img6,
     label: 'Pagar Conta'
   },
   {
-    key: '3',
     img: Img7,
     label: 'Cobrar'
   },
   {
-    key: '4',
     img: Img1,
     label: 'Recarga de Celular'
   },
   {
-    key: '5',
     img: Img2,
     label: 'Uber Pré Pago'
   },
   {
-    key: '6',
     img: Img3,
     label: 'Cartão de Transporte'
   },
   {
-    key: '7',
     img: Img4,
     label: 'SKY TV Pré-Pago'
   }
@@ -61,17 +64,39 @@ const header = [
   }
 ];
 
-export default function Suggestions() {
+const headerPay = [
+  {
+    label: 'Sugestões para Você',
+    hasBorder: false
+  }
+];
+
+export default function Suggestions({ page }) {
   return (
     <Container>
-      <Header>
-        {header.map(item => (
-          <Action hasBorder={item.hasBorder}>{item.label}</Action>
-        ))}
-      </Header>
+      {
+        page === 'Home'
+          ?
+          <Header>
+            {header.map((item, i) => (
+              <Action key={i} hasBorder={item.hasBorder}>{item.label}</Action>
+            ))}
+          </Header>
+          : null
+      }
+      {
+        page === 'Pay'
+          ?
+          <Header>
+            {headerPay.map((item, i) => (
+              <ActionPay key={i} hasBorder={item.hasBorder}>{item.label}</ActionPay>
+            ))}
+          </Header>
+          : null
+      }
       <Scroll>
-        {items.map(item => (
-          <Option key={item.key}>
+        {items.map((item, j) => (
+          <Option key={j}>
             <Img source={item.img} />
             <Label>{item.label}</Label>
           </Option>

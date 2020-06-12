@@ -33,7 +33,7 @@ export const ActionLabel = styled.Text`
 `;
 
 export const Card = styled.View`
-  background: #1e222b;
+  background: #1c1c1e;
   border-radius: 8px;
   padding: 15px;
   margin: 10px;

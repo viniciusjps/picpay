@@ -26,7 +26,7 @@ export const Section = styled.Text`
 export const SettigsItems = styled.TouchableOpacity.attrs(() => ({
   activeOpacity: 0.8
 }))`
-  background: #1e232a;
+  background: #1c1c1e;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
