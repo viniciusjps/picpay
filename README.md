@@ -12,8 +12,9 @@
 - `npm start` (iniciar)
 <br>
 <p align="center">
-  <img alt="1" height="460px" src="https://i.imgur.com/IPVpNTL.jpg">
-  <img alt="2" height="460px" src="https://i.imgur.com/5r3Wr4l.jpg">
-  <img alt="3" height="460px" src="https://i.imgur.com/TLEipQw.jpg">
-  <img alt="4" height="460px" src="https://i.imgur.com/hwL6kDI.jpg">
+  <img alt="1" height="360px" src="https://i.imgur.com/6uUwQOW.png">
+  <img alt="2" height="360px" src="https://i.imgur.com/ch0PpaI.png">
+  <img alt="3" height="360px" src="https://i.imgur.com/yqBa5SY.png">
+  <img alt="3" height="360px" src="https://i.imgur.com/nShKi61.png">
+  <img alt="4" height="360px" src="https://i.imgur.com/7wO6K1P.png">
 </p>
